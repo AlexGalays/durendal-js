@@ -3,7 +3,9 @@ Simple node based list templating.
 
 # Content
 * [Code examples](#code-examples)
+* [Dependencies](#dependencies)
 * [Sales pitch](#sales-pitch)
+* [Durendal?](#durendal)
 
 <a name="code-examples"></a>
 # Code examples
@@ -49,6 +51,13 @@ Render([1, 2, 3]).into('#squares')();
 [Full example](http://alexgalays.github.com/durendal-js/list.html)
 
 
+<a name="dependencies"></a>
+# Dependencies
+
+Durendal only depends on JQuery (But the script order doesn't matter).  
+There is an optional dependency on my other library `collection-js`, so you can directly pass a `List` or `ArrayMap` to be rendered.
+
+
 <a name="sales-pitch"></a>
 # Sales pitch
 
@@ -62,7 +71,7 @@ Rendering a set of data to DOM nodes is certainly not new, many libraries do it 
 But Durendal does just that, fast and easy, and you may want to use it when/if you don't use any of these libraries.
 
 **Durendal is clean**  
-The DOM remains absolutely clean, the binding occurs in succint Javascript using a DSL.
+The DOM remains absolutely clean, the binding occurs with succinct Javascript using a DSL.
 
 **Durendal is flexible**  
 You are not forced to shape your data in any particular way, since you specify how the data binds to the DOM
@@ -74,3 +83,12 @@ at altering the DOM tree but faster with the innerHTML property. This is no long
 
 Furthermore, with a node based templating, the engine can easily
 find out what changed between updates and just operate on those changes, instead of regenerating the full list everytime.
+
+
+<a name="durendal"></a>
+# Durendal?
+
+* Duh, render all ?
+* It will give you an edge  
+
+
