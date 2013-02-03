@@ -86,7 +86,7 @@ function Durendal(items) {
 
       for (i = -1; ++i < m;) {
         datum = data[i];
-        keyValue = key(datum, i);
+        keyValue = key(datum);
 
         // There's already a node bound to this datum
         if (node = keyToNode[keyValue]) {
