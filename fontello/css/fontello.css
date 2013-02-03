@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot");
+  src: url("../font/fontello.eot?#iefix") format('embedded-opentype'), url("../font/fontello.woff") format('woff'), url("../font/fontello.ttf") format('truetype'), url("../font/fontello.svg#fontello") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+/* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+}
+
+.icon-delete:before { content: '\2715'; } /* 'âœ•' */
+.icon-male:before { content: '👤'; } /* '\1f464' */
+.icon-female:before { content: '👩'; } /* '\1f469' */

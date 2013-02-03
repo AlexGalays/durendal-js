@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+
+.icon-user:before { content: '👤'; } /* '\1f464' */
+.icon-user-woman:before { content: '👩'; } /* '\1f469' */

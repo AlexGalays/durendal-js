@@ -1,0 +1,42 @@
+
+
+body {
+    color: #333333;
+    background: #EEE;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.template {
+    display: none !important;
+}
+
+#wrapper {
+    width: 400px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -200px;
+    text-align: center;
+}
+
+select {
+    display: block;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    border: 1px solid #999;
+    margin-left: 100px;
+}
+
+select button {
+    border: none;
+}
+
+select:nth-last-of-type(1) {
+    margin-bottom: 30px;
+}
+
+#selection {
+    font-weight: bold;
+}

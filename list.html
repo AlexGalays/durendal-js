@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>list example</title>
+        <link rel="stylesheet" type="text/css" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="fontello/css/fontello.css">
+        <link rel="stylesheet" type="text/css" href="list.css">
+    </head>
+
+    <body>
+
+        <ul id="articles">
+            <li class="template">
+                <i class="gender"></i>
+                <h3 class="title"></h3>
+                <i class="icon-delete"></i>
+            </li>
+        </ul>
+
+        <div id="controls">
+            <div class="button-group">
+                <h3>~ add ~</h3><!--
+             --><button id="addTop">top</button><!--
+             --><button id="addRandom">random</button><!--
+         --></div>
+            <div class="button-group">
+                <h3>~ remove ~</h3><!--
+             --><button id="removeTop">top</button><!--
+             --><button id="removeRandom">random</button><!--
+         --></div>
+
+            <button id="reset">reset</button>
+            <button id="shuffle">shuffle</button>
+            <button id="filter">filter</button>
+
+            <h3><span id="articleCount"></span> items</h3>
+        </div>
+
+        <script src="prefixfree.min.js"></script>
+        <script src="jquery.js"></script>
+        <script src="durendal.js"></script>
+        <script src="collection.js"></script>
+        <script src="list.js"></script>
+
+    </body>
+
+</html>
