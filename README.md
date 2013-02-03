@@ -70,7 +70,7 @@ using the `added` and/or `each` callbacks.
 
 **Durendal is fast**  
 String based templating was considered superior a few years ago when browsers were very slow
-at altering the DOM tree and but faster when with the innerHTML property. This is no longer the case and rendering a list of items using String based templating now only have disadvantages.
+at altering the DOM tree but faster with the innerHTML property. This is no longer the case and rendering a list of items using String based templating now only have disadvantages.
 
 Furthermore, with a node based templating, the engine can easily
 find out what changed between updates and just operate on those changes, instead of regenerating the full list everytime.
