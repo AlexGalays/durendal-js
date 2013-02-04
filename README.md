@@ -112,6 +112,20 @@ render(data) // Re-renders data or another data altogether
 render() // Renders reusing the last data passed
 ```
 
+The more functional inclined among you may want to pass a function to `Render` instead of a direct data reference.
+Passing a function achieves late binding and generally reduce the amount of state you have to keep around.
+The function can produce a `null`, an `Array`, a `List` or an `ArrayMap`.
+
+```javascript
+var render = Render(people).into('ul')();
+
+function people() {
+   return paginated(allPeople).filter(activeFilter).sort(activeSort);
+}
+
+// Then later call render() whenever the user changes a parameter.
+```
+
 ## The callbacks
 
 ```javascript
@@ -198,7 +212,7 @@ var addedAnimation = {
 Render().into().addedAnimation(addedAnimation)
 ```
 Note that JQuery effects are not great but will work fine in most simple scenarios.  
-You can of course use any other tweaning libraries to programmatically animate the nodes.
+You can of course use any other tweening libraries to programmatically animate the nodes.
 
 
 <a name="sales-pitch"></a>
