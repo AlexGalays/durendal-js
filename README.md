@@ -125,6 +125,16 @@ function people() {
 
 // Then later call render() whenever the user changes a parameter.
 ```
+## Getting the data bound to a node
+
+It is often useful to retrieve the data that was bound to a DOM node, for instance you may want
+to remove that data from your collection when clicking the node.
+To do so, use `Render.dataFor`:
+
+```javascript
+// Get the data bound to this node or the nearest parent which had data bound.
+var data = Render.dataFor(node);
+```
 
 ## The callbacks
 

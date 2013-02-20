@@ -400,6 +400,9 @@ Durendal.data = function(from) {
 * Returns the data currently bound to the passed node.
 */
 Durendal.dataFor = function(node) {
+  while (!node.__data__ && node.parentNode) 
+    node = node.parentNode;
+  
   return node.__data__;
 }
 
