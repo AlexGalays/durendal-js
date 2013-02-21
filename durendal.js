@@ -8,6 +8,7 @@ function Durendal(items) {
   var items = items,
       into,
       key,
+      created,
       added,
       removed,
       each,
@@ -189,8 +190,10 @@ function Durendal(items) {
 
       node = nodes[i];
 
+      if (created) created(node, node.__data__, i);
       container.insertBefore(node, children[i]);
       if (added) added(node, node.__data__, i);
+
       if (playAnimation) addedAnimation.start(node);
     }
   }
@@ -274,7 +277,17 @@ function Durendal(items) {
 
   /**
   * Registers a callback that should be called everytime a node
-  * is created and added to the DOM.
+  * is created and is about to be added to the DOM.
+  */
+  render.created = function(value) {
+    if (!arguments.length) return created;
+    created = value;
+    return render;
+  };
+
+  /**
+  * Registers a callback that should be called everytime a node
+  * was added to the DOM.
   */
   render.added = function(value, animation) {
     if (!arguments.length) return added;

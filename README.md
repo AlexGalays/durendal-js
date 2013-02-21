@@ -142,7 +142,7 @@ var data = Render.dataFor(node);
 Render().into()
   .added(func).removed(func).each(func)
 ```
-
+`created` is called everytime a DOM node is created but before it is added
 `added` is called everytime a DOM node is created and added  
 `removed` is called everytime a DOM node is removed  
 `each` is called for each node/data everytime render() is called  
@@ -186,7 +186,7 @@ The key must be unique across the data.
 
 Now that DOM nodes know which data they represent, all animations will work as expected.  
 Also, we now have access to some interesting optimizations   
-The `added` callback can be used to setup the initial appearance and invariants of a node and
+The `created` or `added` callback can be used to setup the initial appearance and invariants of a node and
 we can either use `update` or another mean (Like JQuery) to render small, incremental changes.
 
 ## Animations
