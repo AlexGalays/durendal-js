@@ -191,7 +191,7 @@ function Durendal(items) {
       node = nodes[i];
 
       if (created) created(node, node.__data__, i);
-      container.insertBefore(node, children[i]);
+      container.insertBefore(node, children[i] || null);
       if (added) added(node, node.__data__, i);
 
       if (playAnimation) addedAnimation.start(node);
