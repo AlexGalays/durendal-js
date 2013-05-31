@@ -190,9 +190,9 @@ function Durendal(items) {
 
       node = nodes[i];
 
-      if (created) created(node, node.__data__, i);
+      if (created) created(node, node.__data__, +i);
       container.insertBefore(node, children[i] || null);
-      if (added) added(node, node.__data__, i);
+      if (added) added(node, node.__data__, +i);
 
       if (playAnimation) addedAnimation.start(node);
     }
@@ -224,7 +224,7 @@ function Durendal(items) {
       if (removedAnimation && !removedAnimation.targets[node.__key__]) removedAnimation.start(node);
       else if (!removedAnimation) {
         container.removeChild(node);
-        if (removed) removed(node, node.__data__, i);
+        if (removed) removed(node, node.__data__, +i);
       }
     }
   }
@@ -247,7 +247,7 @@ function Durendal(items) {
     for (var i in nodes) {
       if (!nodes.hasOwnProperty(i)) continue;
 
-      each(nodes[i], nodes[i].__data__, i);
+      each(nodes[i], nodes[i].__data__, +i);
     }
   }
 
